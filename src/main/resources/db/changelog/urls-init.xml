@@ -13,8 +13,10 @@
             CREATE TABLE urls
             (
                 short VARCHAR(16) NOT NULL PRIMARY KEY,
-                url   TEXT        NOT NULL
+                url   VARCHAR(2048)        NOT NULL
             );
+
+            CREATE INDEX ix_urls_url ON urls(url);
         </sql>
     </changeSet>
 </databaseChangeLog>
